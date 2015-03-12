@@ -51,14 +51,14 @@
             Check.That(product).Equals(2 * 2.6);
         }
 
-        [Test]
-        public void CompositionAndPolymorphismWithInterfaceRatherThanInheritance()
-        {
-            var calculatorWithStrategies = new ComposedStringCalculator(new IComputeStrategy[] { new SumStrategy(), new ProductStrategy() });
-            var sum = calculatorWithStrategies.Calculate("1,0+2,3");
-            var product = calculatorWithStrategies.Calculate("2,0*2,3");
-            Check.That(sum).Equals(1.0 + 2.3);
-            Check.That(product).Equals(2.0 * 2.3);
-        }
+        //[Test]
+        //public void CompositionAndPolymorphismWithInterfaceRatherThanInheritance()
+        //{
+        //    var calculatorWithStrategies = new ComposedStringCalculator(new IComputeStrategy[] { new SumStrategy(), new ProductStrategy() });
+        //    var sum = calculatorWithStrategies.Calculate("1,0+2,3");
+        //    var product = calculatorWithStrategies.Calculate("2,0*2,3");
+        //    Check.That(sum).Equals(1.0 + 2.3);
+        //    Check.That(product).Equals(2.0 * 2.3);
+        //}
     }
 }

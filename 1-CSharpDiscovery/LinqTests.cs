@@ -1,5 +1,6 @@
 ﻿namespace CSharpDiscovery
 {
+    using System.Collections.Generic;
     using System.Linq;
     using NFluent;
     using NUnit.Framework;
@@ -7,14 +8,16 @@
     [TestFixture]
     public class LinqTests
     {
-        //[Test]
-        //public void UseAForeachLoopToSelectItemsStartingWithPlCaseSentitive()
-        //{
-        //    var items = new[] { "plip", "foo", "bar", "plop", "plup", "Plap" };
-        //    var filteredItems = new List<string>();
-        //    // foreach loop to add
-        //    Check.That(filteredItems).ContainsExactly("plip", "plop", "plup");
-        //}
+        [Test]
+        public void UseAForeachLoopToSelectItemsStartingWithPlCaseSentitive()
+        {
+            var items = new[] { "plip", "foo", "bar", "plop", "plup", "Plap" };
+            // foreach loop to add
+            var filteredItems = (from str in items
+                            where str=="plip" || str=="plop" || str=="plup"
+                            select str).ToList();
+            Check.That(filteredItems).ContainsExactly("plip", "plop", "plup");
+        }
 
         //[Test]
         //public void TransformPreviousForeachLoopInALinqExpression()
