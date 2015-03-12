@@ -15,7 +15,7 @@ namespace CSharpDiscovery
             this.Name = "Calculator";
         }
 
-        public double sumOfTheArray(double[] tab)
+        public virtual double sumOfTheArray(double[] tab)
         {
             double sum = 0;
             foreach (double f in tab)
@@ -24,6 +24,8 @@ namespace CSharpDiscovery
             }
             return sum;
         }
+
+
 
         public double onePlusTwo(String str)
         {
