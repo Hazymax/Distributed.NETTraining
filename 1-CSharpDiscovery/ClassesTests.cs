@@ -62,6 +62,7 @@ namespace CSharpDiscovery
             Check.That(calculator.Name).Equals("Calculator");
         }
 
+<<<<<<< HEAD
         [Test]
         public void DefineConstantForPi()
         {
@@ -70,6 +71,15 @@ namespace CSharpDiscovery
             Calculator calculator = new Calculator();
             Check.That(calculator.onePlusTwo(sumOfADoubleAndPiConstant)).Equals(4.34);
         }
+=======
+        //[Test]
+        //public void DefineConstantForPi()
+        //{
+        //    var sumOfADoubleAndPiConstant = "1,2 + pi";
+        //    // define pi constant (as double) and replace pi string with constant value
+        //    Check.That(sum).Equals(4.34);
+        //}
+>>>>>>> TD1.2.1
 
         //[Test]
         //public void StaticReadonlyMembers()
